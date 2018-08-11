@@ -20,7 +20,7 @@ char	**ft_strsplit(char const *s, char c)
 	size_t		start;
 	char		**wlist;
 
-	count = ft_words((char *)s, c);
+	count = ft_wordcountd((char *)s, c);
 	ap = 0;
 	pos = 0;
 	if (!(wlist = (char **)malloc(sizeof(char *) * (count + 1))))

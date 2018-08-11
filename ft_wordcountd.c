@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_wordcountd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/13 15:06:50 by saolivei          #+#    #+#             */
-/*   Updated: 2018/07/13 15:30:49 by saolivei         ###   ########.fr       */
+/*   Created: 2018/07/25 14:36:17 by saolivei          #+#    #+#             */
+/*   Updated: 2018/07/25 14:39:57 by saolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+size_t	ft_wordcountd(char *str, char c)
 {
-	if (n == -2147483648)
+	size_t count;
+
+	if (*str != c && *str != 0)
+		count = 1;
+	else
+		count = 0;
+	while (*str != 0)
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		if (*str == c)
+		{
+			while (*str == c && *str != 0)
+				str++;
+			if (*str != c && *str != 0)
+				count++;
+		}
+		else
+			str++;
 	}
-	if (n < 0)
-	{
-		n *= -1;
-		write(fd, "-", 1);
-	}
-	if (n > 9)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd((n % 10) + '0', fd);
+	return (count);
 }

@@ -61,10 +61,11 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				*ft_itoa(int n);
+char				**ft_strsplit(char const *s, char c);
 
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, char const *src, size_t dstsize);
-size_t				ft_words(char *str, char c);
+size_t				ft_wordcountd(char *str, char c);
 size_t				ft_lstlen(t_list *start_lst);
 
 void				ft_striter(char *s, void (*f)(char *));
