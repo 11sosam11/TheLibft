@@ -6,7 +6,7 @@
 /*   By: saolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 14:57:37 by saolivei          #+#    #+#             */
-/*   Updated: 2018/07/11 14:57:47 by saolivei         ###   ########.fr       */
+/*   Updated: 2018/08/14 15:12:25 by saolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int					ft_isascii(int c);
 int					ft_isalnum(int c);
 int					ft_isdigit(int c);
 int					ft_isalpha(int c);
+int					ft_isspace(int c);
 int					ft_intlen(int n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
